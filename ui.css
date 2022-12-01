@@ -2,6 +2,8 @@
 {
     margin : 0px;
     padding : 0px;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
 }
 
 
@@ -119,7 +121,9 @@
     margin-right: 100px;
     margin-top: 50px;
     margin-bottom: 30px;
-    height: 400px;
+    height: auto;
+    padding-bottom: 10px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.178);
@@ -131,7 +135,9 @@
     margin-right: 100px;
     margin-top: 10px;
     margin-bottom: 30px;
-    height: 400px;
+    height: auto;
+    padding-bottom: 10px;
+    min-width: 350px;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 255, 255, 0.116);
@@ -153,11 +159,13 @@
     height: 80% ;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 .block
 {
     margin: auto;   
     padding: 3px;
+    margin-bottom: 25px;
     height: 250px;
     background-color: rgba(22, 30, 37, 0.37);
 }
@@ -256,5 +264,13 @@
     #intro-para
     {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 850px){
+    .intro
+    {
+        width:100%;
+        margin-left:10px;
     }
 }
