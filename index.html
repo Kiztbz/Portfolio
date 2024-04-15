@@ -6,6 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="ui.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Explore the life and works of Pragya, also known as Kiz, through his personal portfolio at Kiztbz.xyz. Discover his journey, projects, and passions.">
+    <meta name="keywords" content="Pragya, Kiz, portfolio, life, projects, passions, Kiztbz, personal portfolio">
+    <meta name="author" content="Pragya (Kiz)">
+    <meta property="og:title" content="Pragya's Portfolio - Kiz">
+    <meta property="og:description"
+        content="Explore the life and works of Pragya, also known as Kiz, through his personal portfolio at Kiztbz.xyz. Discover his journey, projects, and passions.">
+    <meta property="og:image" content="https://kiztbz.xyz/images/flower.jpg">
+    <meta property="og:url" content="https://kiztbz.xyz">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Pragya's Portfolio - Kiz">
+    <meta name="twitter:description"
+        content="Explore the life and works of Pragya, also known as Kiz, through his personal portfolio at Kiztbz.xyz. Discover his journey, projects, and passions.">
+    <meta name="twitter:image" content="https://kiztbz.xyz/images/flower.jpg">
+    <meta name="twitter:site" content="@Pragya10790607">
+
     <title>Kiztbz</title>
 </head>
 
@@ -18,15 +38,36 @@
             <a href="#" class="nav-link">About</a>
             <a href="#" class="nav-link">Contact</a>
         </div>
+        <!--https://codepen.io/shephero/pen/LYVrdjX-->
+        <div class="HamMenu" onclick="Menu()">
+            <svg class="hb" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 10 10" stroke="#eee" stroke-width=".6"
+                fill="rgba(0,0,0,0)" stroke-linecap="round" style="cursor: pointer">
+                <path d="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7">
+                    <animate dur="0.2s" attributeName="d"
+                        values="M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7;M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7" fill="freeze"
+                        begin="start.begin" />
+                    <animate dur="0.2s" attributeName="d"
+                        values="M3,3L5,5L7,3M5,5L5,5M3,7L5,5L7,7;M2,3L5,3L8,3M2,5L8,5M2,7L5,7L8,7" fill="freeze"
+                        begin="reverse.begin" />
+                </path>
+                <rect width="10" height="10" stroke="none">
+                    <animate dur="2s" id="reverse" attributeName="width" begin="click" />
+                </rect>
+                <rect width="10" height="10" stroke="none">
+                    <animate dur="0.001s" id="start" attributeName="width" values="10;0" fill="freeze" begin="click" />
+                    <animate dur="0.001s" attributeName="width" values="0;10" fill="freeze" begin="reverse.begin" />
+                </rect>
+            </svg>
+        </div>
     </div>
-    <div class="body">
+    <div class="body" id="appbody">
 
         <div class="intro">
             <div id="intro-para">
-                <img src="images/me3.webp" id="me">
+                <img src="images/me6.webp" id="me" alt="Kiztbz a.k.a Pragya">
                 <div style="margin-top: 10px;"><strike>I'm a college student</strike></div>
                 <div>
-                    <p>Just got out of high school.</p>
+                    <p>Just got out of school.</p>
                 </div>
             </div>
             <div id="moreinfo">
@@ -35,11 +76,19 @@
                     cooperative. I'm also the co-founder and CMO of FolioCustoms Pvt. Ltd. India. I'm based in India and
                     I'm a web developer by profession and a traveller at heart.</p>
                 <div id="introbtns">
-                    <a class="introbtn" href="https://www.instagram.com/kiztbz"><img src="images/ig.png"><p>Instagram</p></a>
+                    <a class="introbtn" href="https://www.instagram.com/kiztbz"><img src="images/ig.png"
+                            alt="instagram logo">
+                        <p>Instagram</p>
+                    </a>
                     <a class="introbtn"
                         href="https://wa.me/916397107016?text=Hey?%20Reaching%20out%20from%20the%20site."><img
-                            src="images/wa.png"><p>Whatsapp</p></a>
-                    <a class="introbtn" href="https://discord.gg/HsBSQQkUAz"><img src="images/disc.png"><p>Discord</p></a>
+                            src="images/wa.png" alt="Whatsapp logo">
+                        <p>Whatsapp</p>
+                    </a>
+                    <a class="introbtn" href="https://discord.gg/HsBSQQkUAz"><img src="images/disc.png"
+                            alt="Discord logo">
+                        <p>Discord</p>
+                    </a>
                 </div>
             </div>
         </div>
@@ -47,7 +96,7 @@
         <div id="LandingBlogs" class="card">
             <div class="title">The Blog</div>
             <div class="blog">
-                <div class="img"><img src="images/Rampur1.webp"></div>
+                <div class="img"><img src="images/Rampur1.webp" alt="Rampur Raza Library"></div>
                 <div class="content">
                     <div class="blog-header">
                         <div class="blog-title">Trip to Rampur : The City of Nawabs</div>
@@ -63,34 +112,60 @@
 
         <div id="ventures" class="card">
             <div class="cards">
-                <a href="#" class="venturecard"><img src="images/corporation.png">FolioCustoms Pvt. Ltd. India</a>
-                <a href="#" class="venturecard"><img src="images/cooperation.png">L.L.A.M.A. LLC</a>
+                <a href="https://foliocustoms.com" class="venturecard" target="_blank"><img src="images/corporation.png"
+                        alt="corporation building">FolioCustoms Pvt. Ltd. India <span style="font-size: 15px;">Web
+                        Developers in India</span></a>
+                <a href="https://joedev.xyz/mneme" class="venturecard" target="_blank"><img src="images/cooperation.png"
+                        alt="community hall">LLAMA LLC <span style="font-size: 15px;">Language Learning And
+                        Multicultural Advancement</span></a>
             </div>
         </div>
     </div>
     <div id="footer">
-        <div class="credit">
-            <h>Pragya P.<br>Kiz<br></h>
+        <div class="credit" id="footer-name">
+            <h>PRAGYA P.<br> KIZ</h>
         </div>
-        <div class="credit">
-            Portfolio_Kiztbz<br>
-            <span class="copy">&#169Mythical Corps. 2022<br>
-                &#174Kiztbz</span>
+        <div class="credit" id="footer-contact">
+            <a href="tel:+916397107016">Phone : +91 6397107016</a>
+            <a href="mailto:pragyapravita@gmail.com">Email : pragyapravita@gmail.com</a>
         </div>
-        <div class="links">
-            <ul>
-                <a href="https://www.instagram.com/kiztbz/" target="__blank">
-                    <li><img src="insta.png">Instagram</li>
-                </a>
-                <a href="https://github.com/Kiztbz" target="__blank">
-                    <li><img src="git.png">Github</li>
-                </a>
-                <a href="https://discord.gg/9pjBmKaanZ" target="__blank">
-                    <li><img id="disc" src="disc.png">Discord</li>
-                </a>
-            </ul>
+        <div class="credit" id="footer-gap">
+            <hr style="width: 100%;border-style: dashed;">
+        </div>
+        <div class="credit" id="footer-links">
+            <a href="https://www.instagram.com/kiztbz" class="footer-link"><img src="/images/ig.png"></a>
+            <a href="https://wa.me/916397107016?text=Hey?%20Reaching%20out%20from%20the%20site."
+                class="footer-link"><img src="/images/wa.png"></a>
+            <a href="https://twitter.com/Pragya10790607" class="footer-link"><img src="/images/X.png"></a>
+            <a href="https://joedev.xyz/mneme" class="footer-link"><img src="/images/M.png"></a>
+            <a href="https://t.snapchat.com/r37MW9Ms" class="footer-link"><img src="/images/snap.png"></a>
+            <a href="https://discord.gg/HsBSQQkUAz" class="footer-link"><img src="/images/disc.png"></a>
+            <a href="https://www.linkedin.com/in/kiztbz/" class="footer-link"><img src="/images/li.png"></a>
+        </div>
+        <!--SIDE MENU-->
+        <div id="sideMenu">
+            <a href="#" class="nav-link">Blog</a>
+            <a href="#" class="nav-link">Portfolio</a>
+            <a href="#" class="nav-link">About</a>
+            <a href="#" class="nav-link">Contact</a>
         </div>
     </div>
+
+
+    <div id="stars" style="display: none;">
+        <div id="star1" class="star"></div>
+        <div id="star2" class="star"></div>
+        <div id="star3" class="star"></div>
+        <div id="star4" class="star"></div>
+        <div id="star5" class="star"></div>
+        <div id="star6" class="star"></div>
+        <div id="star7" class="star"></div>
+        <div id="star8" class="star"></div>
+        <div id="star9" class="star"></div>
+        <div id="star10" class="star"></div>
+    </div>
+    <script src="settings.js"></script>
+    <script type="text/javascript" src="settings.js"></script>
 </body>
 
 </html>
